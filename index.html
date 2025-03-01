@@ -1,15 +1,34 @@
-<form>
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname"><br>
-  <label for="lname">Last name:</label><br>
-  <label for="lname">Middle name:</label><br>
-  <link rel="stylesheet" href="styles.css">
-  <label for="lname">Father name:</label><br>
-  <label for="lname">Mother name:</label><br>
-  <input type="text" id="lname" name="lname">
-</form>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-  <h1>This is version v4</h1>
-  <link rel="stylesheet" href="styles.css">
+    <h1>This is version v5 with latest Design v5</h1>
+
+    <div class="form-container">
+        <h2>Personal Details</h2>
+        <form>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+
+            <label for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" placeholder="Enter your middle name">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+
+            <label for="fathername">Father's Name:</label>
+            <input type="text" id="fathername" name="fathername" placeholder="Enter father's name">
+
+            <label for="mothername">Mother's Name:</label>
+            <input type="text" id="mothername" name="mothername" placeholder="Enter mother's name">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
+</html>
