@@ -1,15 +1,12 @@
 version: '3.8'
 
-networks:
-  data_management:
-
 services:
   mysqldb:
-    image: mysql:latest  # Fixed 'images' -> 'image'
+    image: mysql:latest
     container_name: mysqldb
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: user_data
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=user_data
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
       interval: 10s
@@ -19,12 +16,15 @@ services:
       - data_management
 
   data_management:
-    build: .  # Removed unnecessary './'
+    build: ./  # Assuming your Dockerfile is in the current directory
     container_name: data_management
     depends_on:
-      mysqldb:
-        condition: service_healthy
+      - mysqldb
     ports:
-      - "9090:9090"
+      - 9090:9090
     networks:
       - data_management
+
+networks:
+  data_management:
+    driver: bridge
