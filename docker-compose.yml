@@ -1,14 +1,16 @@
-version: '3.8'
+version: "3.8"
 
 networks:
   best:
+    driver: bridge
+
 services:
   mysqldb:
     image: mysql:latest
     container_name: mysqldb
     environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=user_data
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_data
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
       interval: 10s
@@ -22,7 +24,7 @@ services:
     container_name: data_management
     depends_on:
       mysqldb:
-      condition: service_healthy
+        condition: service_healthy
     ports:
       - 9090:9090
     networks:
