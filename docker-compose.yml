@@ -21,7 +21,8 @@ services:
     build: ./  # Assuming your Dockerfile is in the current directory
     container_name: data_management
     depends_on:
-      - mysqldb
+      mysqldb:
+      condition: service_healthy
     ports:
       - 9090:9090
     networks:
