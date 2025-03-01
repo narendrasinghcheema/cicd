@@ -4,6 +4,9 @@ networks:
   best:
     driver: bridge
 
+    volumes:
+     data_management_volume:
+
 services:
   mysqldb:
     image: mysql:latest
@@ -29,3 +32,5 @@ services:
       - 9090:9090
     networks:
       - best
+    volumes:
+      - ./app1:/app1 
