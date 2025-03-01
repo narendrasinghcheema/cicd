@@ -21,6 +21,8 @@ services:
       start_period: 30s
     networks:
       - best
+    volumes:
+      - data_management_volume:/var/lib/mysql
 
   data_management:
     build: ./  # Assuming your Dockerfile is in the current directory
