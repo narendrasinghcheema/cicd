@@ -11,21 +11,21 @@
 
     <div class="form-container">
         <h2>Personal Details</h2>
-        <form>
+        <form action="/submit" method="POST">  <!-- Updated here -->
             <label for="fname">First Name:</label>
-            <input type="text" id="fname" name="fname" placeholder="Enter your first name">
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
 
             <label for="mname">Middle Name:</label>
             <input type="text" id="mname" name="mname" placeholder="Enter your middle name">
 
             <label for="lname">Last Name:</label>
-            <input type="text" id="lname" name="lname" placeholder="Enter your last name">
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
 
             <label for="fathername">Father's Name:</label>
-            <input type="text" id="fathername" name="fathername" placeholder="Enter father's name">
+            <input type="text" id="fathername" name="fathername" placeholder="Enter father's name" required>
 
             <label for="mothername">Mother's Name:</label>
-            <input type="text" id="mothername" name="mothername" placeholder="Enter mother's name">
+            <input type="text" id="mothername" name="mothername" placeholder="Enter mother's name" required>
 
             <button type="submit">Submit</button>
         </form>

@@ -1,0 +1,30 @@
+version: '3.8'
+
+networks:
+  data_management:
+
+services:
+  mysqldb:
+    image: mysql:latest  # Fixed 'images' -> 'image'
+    container_name: mysqldb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: user_data
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - data_management
+
+  data_management:
+    build: .  # Removed unnecessary './'
+    container_name: data_management
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+    ports:
+      - "9090:9090"
+    networks:
+      - data_management
