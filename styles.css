@@ -1,0 +1,25 @@
+/* Define colors */
+body {
+    background-color: #f4f4f4;  /* Light gray background */
+    color: #333;  /* Dark text */
+  }
+  
+  h1 {
+    color: #007bff;  /* Blue heading */
+  }
+  
+  p {
+    color: #555;  /* Slightly dark text for paragraphs */
+  }
+  
+  button {
+    background-color: #28a745; /* Green button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
