@@ -9,10 +9,10 @@ services:
     image: mysql:latest
     container_name: mysqldb
     environment:
-      MYSQL_ROOT_PASSWORD: Narendra#123
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: user_data
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uadmin", "-pNarendra#123"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
       interval: 10s
       retries: 5
       start_period: 30s
