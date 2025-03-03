@@ -10,6 +10,10 @@ COPY . .
 # Install dependencies
 RUN pip install --no-cache-dir flask mysql-connector-python
 
+RUN pip install cryptography
+
+RUN pip install pymysql
+
 # Expose port 9090 for the Flask app
 EXPOSE 9090
 
