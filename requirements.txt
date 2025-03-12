@@ -1,5 +1,5 @@
-flask
-mysql-connector-python
-cryptography
-pymysql
-pytest
+flask==2.2.3
+mysql-connector-python==8.0.30
+cryptography==37.0.4
+pymysql==1.0.2
+pytest==7.2.2
