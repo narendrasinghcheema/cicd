@@ -7,7 +7,7 @@ app = Flask(__name__)
 db = mysql.connector.connect(
     host="localhost",       # Change this if the database is hosted elsewhere
     user="root",            # Your MySQL username
-    password="root",    # Your MySQL password
+    password="Narendra#123",    # Your MySQL password
     database="user_data"    # The database you want to use
 )
 
