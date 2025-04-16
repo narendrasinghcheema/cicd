@@ -5,10 +5,10 @@ app = Flask(__name__)
 
 # Database connection
 db = mysql.connector.connect(
-    host="database-1.cvq2w2kaidbr.us-east-2.rds.amazonaws.com",       # Change this if the database is hosted elsewhere
-    user="admin",            # Your MySQL username
-    password="Narendra#123",    # Your MySQL password
-    database="user_data"    # The database you want to use
+    host="database-1.cvq2w2kaidbr.us-east-2.rds.amazonaws.com",
+    user="admin",
+    password="Narendra#123",
+    database="user_data"
 )
 
 cursor = db.cursor()
@@ -21,7 +21,8 @@ cursor.execute("""
         middle_name VARCHAR(100),
         last_name VARCHAR(100),
         father_name VARCHAR(100),
-        mother_name VARCHAR(100)
+        mother_name VARCHAR(100),
+        dob DATE
     )
 """)
 db.commit()
@@ -37,9 +38,13 @@ def submit():
     last_name = request.form['lname']
     father_name = request.form['fathername']
     mother_name = request.form['mothername']
+    dob = request.form['dob']  # Expected format: 'YYYY-MM-DD'
 
-    sql = "INSERT INTO users (first_name, middle_name, last_name, father_name, mother_name) VALUES (%s, %s, %s, %s, %s)"
-    values = (first_name, middle_name, last_name, father_name, mother_name)
+    sql = """
+        INSERT INTO users (first_name, middle_name, last_name, father_name, mother_name, dob)
+        VALUES (%s, %s, %s, %s, %s, %s)
+    """
+    values = (first_name, middle_name, last_name, father_name, mother_name, dob)
     cursor.execute(sql, values)
     db.commit()
 
