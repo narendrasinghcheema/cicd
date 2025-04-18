@@ -7,6 +7,6 @@ spec:
     app: my-application
   type: LoadBalancer
   ports:
-    - protocol: http
+    - protocol: tcp
       port: 80
       targetPort: 9090
