@@ -15,24 +15,34 @@ body {
 }
 
 h1 {
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    padding: 12px 25px;
-    border-radius: 12px;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    padding: 15px 30px;
+    border-radius: 14px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    text-shadow: 1px 1px 10px #ff0000;
 }
 
 .form-container {
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
-    width: 360px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(255, 0, 0, 0.2);
+    width: 400px;
     text-align: center;
     animation: fadeIn 1s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 10px #ffcc00;
 }
 
 form label {
@@ -40,42 +50,49 @@ form label {
     margin-top: 15px;
     font-weight: 600;
     text-align: left;
-    color: #ddd;
+    color: #f5f5f5;
+    letter-spacing: 0.5px;
 }
 
 form input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-top: 6px;
-    border: none;
-    border-radius: 8px;
+    border: 1px solid #444;
+    border-radius: 10px;
     outline: none;
     font-size: 14px;
     background: #1c1c1c;
     color: #fff;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s, border 0.3s;
 }
 
 form input:focus {
-    box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
+    box-shadow: 0 0 12px #ffcc00;
+    border: 1px solid #ffcc00;
 }
 
 button {
-    background-color: #ff4757;
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
     color: white;
     border: none;
-    padding: 12px;
-    margin-top: 20px;
+    padding: 14px;
+    margin-top: 25px;
     font-size: 16px;
+    font-weight: bold;
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 button:hover {
-    background-color: #ff6b81;
+    background: linear-gradient(135deg, #ff6b81, #ffa502);
     transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 165, 2, 0.5);
 }
 
 @media (max-width: 600px) {
