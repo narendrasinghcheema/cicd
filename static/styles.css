@@ -1,6 +1,5 @@
-/* General Styles */
 body {
-    background: linear-gradient(135deg, #667eea, #764ba2); /* Modern gradient */
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,43 +7,42 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    color: #fff;
+    color: #f1f1f1;
     overflow: hidden;
+    background-image: url('/static/car-bg.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
-/* Heading Style */
 h1 {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
     padding: 12px 25px;
     border-radius: 12px;
     font-size: 2rem;
     margin-bottom: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Form Container */
 .form-container {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
-    width: 350px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5);
+    width: 360px;
     text-align: center;
     animation: fadeIn 1s ease;
 }
 
-/* Form Labels */
 form label {
     display: block;
     margin-top: 15px;
     font-weight: 600;
     text-align: left;
-    color: #e0e0e0;
+    color: #ddd;
 }
 
-/* Form Inputs */
 form input {
     width: 100%;
     padding: 10px;
@@ -53,16 +51,17 @@ form input {
     border-radius: 8px;
     outline: none;
     font-size: 14px;
+    background: #1c1c1c;
+    color: #fff;
     transition: box-shadow 0.3s;
 }
 
 form input:focus {
-    box-shadow: 0 0 8px rgba(102, 126, 234, 0.8);
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.8);
 }
 
-/* Button Styling */
 button {
-    background-color: #ff6b6b;
+    background-color: #ff4757;
     color: white;
     border: none;
     padding: 12px;
@@ -75,18 +74,16 @@ button {
 }
 
 button:hover {
-    background-color: #fa5252;
-    transform: scale(1.02);
+    background-color: #ff6b81;
+    transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .form-container {
         width: 90%;
     }
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;

@@ -38,7 +38,7 @@ def submit():
     last_name = request.form['lname']
     father_name = request.form['fathername']
     mother_name = request.form['mothername']
-    dob = request.form['dob']  # Expected format: 'YYYY-MM-DD'
+    dob = request.form['dob']
 
     sql = """
         INSERT INTO users (first_name, middle_name, last_name, father_name, mother_name, dob)
